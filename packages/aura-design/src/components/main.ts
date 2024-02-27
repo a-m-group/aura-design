@@ -1,7 +1,7 @@
 import Button from './Button';
 import Card from './Card';
 import ChatBubble from './ChatBubble';
-import CountDance from './DanceCount';
+import DanceCount from './DanceCount';
 import DanceNumber from './DanceNumber';
 import FlexBox from './FlexBox';
 import FlexItem from './FlexItem';
@@ -20,7 +20,7 @@ export {
     Button,
     Card,
     ChatBubble,
-    CountDance,
+    DanceCount,
     DanceNumber,
     FlexBox,
     FlexItem,
