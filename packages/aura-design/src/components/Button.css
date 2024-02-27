@@ -1,0 +1,125 @@
+:host {
+    align-items: center;
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    height: var(--input-height);
+}
+
+button {
+    align-items: center;
+    background: inherit;
+    border: none;
+    border-radius: inherit;
+    box-sizing: border-box;
+    color: inherit;
+    cursor: pointer;
+    display: inline-flex;
+    font: inherit;
+    gap: var(--gap);
+    height: inherit;
+    justify-content: center;
+    outline: none;
+    padding: 0 12px;
+    width: inherit;
+}
+
+button:hover {
+    filter: brightness(1.1);
+}
+
+.primary {
+    background-image: var(--accent-gradient);
+    color: var(--accent-color);
+
+    &.text {
+        background-image: none;
+        color: var(--primary-color);
+    }
+
+    &.outline {
+        background-image: none;
+        border: 1px solid var(--primary-color);
+        color: var(--primary-color);
+    }
+
+    &:hover {
+        filter: brightness(1.2);
+    }
+}
+
+.info {
+    background: var(--info-color);
+
+    &.text {
+        background: none;
+        color: var(--text-color);
+    }
+
+    &.outline {
+        background: none;
+        border: 1px solid var(--info-color);
+        color: var(--text-color);
+    }
+
+    &:hover {
+        filter: brightness(0.95);
+    }
+}
+
+.warning {
+    background: var(--warning-color);
+    color: var(--accent-color);
+
+    &.text {
+        background: none;
+        color: var(--warning-color);
+    }
+
+    &.outline {
+        background: none;
+        border: 1px solid var(--warning-color);
+        color: var(--warning-color);
+    }
+}
+
+.danger {
+    background: var(--danger-color);
+    color: var(--accent-color);
+
+    &.text {
+        background: none;
+        color: var(--danger-color);
+    }
+
+    &.outline {
+        background: none;
+        border: 1px solid var(--danger-color);
+        color: var(--danger-color);
+    }
+}
+
+.success {
+    background: var(--success-color);
+    color: var(--accent-color);
+
+    &.text {
+        background: none;
+        color: var(--success-color);
+    }
+
+    &.outline {
+        background: none;
+        border: 1px solid var(--success-color);
+        color: var(--success-color);
+    }
+}
+
+.circle {
+    border-radius: 50%;
+    padding: 0 2px;
+    width: var(--input-height);
+}
+
+.round {
+    border-radius: var(--round-radius);
+}

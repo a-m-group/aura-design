@@ -1,0 +1,10 @@
+:root,
+body[data-theme='light'] {
+    --bg-1: #fff;
+    --bg-2: #f4f7fb;
+    --gray-1: rgb(247 248 250);
+    --gray-2: rgb(242 243 245);
+    --gray-3: rgb(229 230 235);
+    --text-color: #333;
+    --box-shadow: 0 0 3px 0 rgb(0 0 0 / 5%);
+}

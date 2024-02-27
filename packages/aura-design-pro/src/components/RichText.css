@@ -1,0 +1,24 @@
+.copy {
+  direction: ltr;
+  position: absolute;
+  bottom: 1em;
+  right: 1em;
+  z-index: 3;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  cursor: pointer;
+}
+
+pre:hover > .copy,
+.copy:focus {
+  opacity: 1;
+}
+
+.lang {
+  color: var(--text-color);
+  position: absolute;
+  top: 1em;
+  right: 1em;
+}

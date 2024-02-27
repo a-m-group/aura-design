@@ -1,0 +1,14 @@
+:host {
+    display: inline-flex;
+    font-size: inherit;
+    transition: 0.3s;
+}
+
+:host([spin]) {
+    animation: rotate 1.4s linear infinite;
+}
+@keyframes rotate {
+    to {
+        transform: rotate(360deg);
+    }
+}

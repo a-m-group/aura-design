@@ -1,0 +1,23 @@
+:host {
+    align-items: center;
+    background-color: var(--bg-2);
+    border-radius: var(--border-radius);
+    display: flex;
+    gap: var(--gap);
+    padding: 0 10px;
+}
+
+.textarea {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    flex: 1;
+    font: inherit;
+    font-size: 14px;
+    margin: 0;
+    outline: none;
+    overflow: auto;
+    padding: 6px 0;
+    resize: none;
+    width: 100%;
+}

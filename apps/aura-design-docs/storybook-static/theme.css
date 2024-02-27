@@ -1,0 +1,15 @@
+:root {
+    --gray-1: 247,248,250;
+    --gray-2: 242,243,245;
+    --gray-3: 229,230,235;
+    --themeColor: #0080ff;
+    --secondaryColor: rgb(var(--gray-2));
+    --fontColor: #333;
+    --borderColor: #f0f5f9;
+    --borderRadius: 3px;
+    --successColor: #3ac569;
+    --waringColor: #fbd14b;
+    --errorColor: #f94e3f;
+    --infoColor: #c9d6de;
+    --dangerColor: #ff7473;
+  }

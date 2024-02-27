@@ -1,0 +1,45 @@
+{
+  "name": "@aura-group/aura-design",
+  "version": "0.3.3",
+  "description": "",
+  "main": "dist/aura-design.umd.js",
+  "module": "dist/aura-design.es.js",
+  "typings": "dist/types/components/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "keywords": [
+    "web-components",
+    "solid-js"
+  ],
+  "author": "@aura-group",
+  "license": "MIT",
+  "dependencies": {
+    "solid-element": "^1.6.3",
+    "solid-js": "^1.6.11"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "eslint": "^8.36.0",
+    "eslint-config-aurai": "workspace:*",
+    "stylelint": "^14.12.0",
+    "stylelint-config-aurai": "workspace:*",
+    "typescript": "^4.9.3",
+    "unocss": "^0.57.4",
+    "vite": "^4.0.4",
+    "vite-plugin-solid": "^2.5.0",
+    "vite-tsconfig-paths": "^4.0.7"
+  }
+}

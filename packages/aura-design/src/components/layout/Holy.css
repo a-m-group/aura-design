@@ -1,0 +1,28 @@
+:host {
+    display: grid;
+    grid-template: auto 1fr auto / auto 1fr auto;
+    height: 100%;
+}
+
+::slotted([slot="header"]) {
+    grid-column: 1 / 4;
+}
+
+::slotted([slot="left-sider"]) {
+    grid-column: 1 / 2;
+    overflow: auto;
+}
+
+::slotted([slot="content"]) {
+    grid-column: 2 / 3;
+    overflow: auto;
+}
+
+::slotted([slot="right-sider"]) {
+    grid-column: 3 / 4;
+    overflow: auto;
+}
+
+::slotted([slot="footer"]) {
+    grid-column: 1 / 4;
+}

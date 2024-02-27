@@ -1,0 +1,39 @@
+{
+  "name": "@aura-group/aura-design",
+  "version": "0.0.0",
+  "description": "",
+  "module": "index.ts",
+  "type": "module",
+  "scripts": {
+    "serve": "rollup -c",
+    "build": "tsc && NODE_ENV=production rollup -c"
+  },
+  "keywords": [
+    "web-components",
+    "solid-js"
+  ],
+  "author": "@aura-group",
+  "license": "MIT",
+  "dependencies": {
+    "solid-element": "^1.6.3",
+    "solid-js": "^1.6.11"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@rollup/plugin-json": "^6.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^11.0.0",
+    "babel-plugin-jsx-dom-expressions": "^0.35.17",
+    "babel-preset-solid": "^1.6.10",
+    "eslint": "^8.36.0",
+    "eslint-config-aura": "workspace:*",
+    "postcss": "^8.4.21",
+    "rollup": "^3.18.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

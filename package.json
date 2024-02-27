@@ -1,0 +1,16 @@
+{
+  "name": "arua-group",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:aura": "pnpm -F aura-design build",
+    "build:aura-pro": "pnpm -F aura-design-pro build",
+    "docs:dev": "pnpm -F aura-design-docs storybook",
+    "docs:build": "pnpm -F aura-design-docs build-storybook-docs",
+    "docs:deploy": "pnpm -F aura-design-docs run deploy"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

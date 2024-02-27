@@ -1,0 +1,21 @@
+:host {
+    align-items: center;
+    background-color: var(--bg-2);
+    border-radius: var(--border-radius);
+    display: inline-flex;
+    gap: var(--gap);
+    height: var(--input-height);
+    padding: 0 12px;
+    width: 100%;
+}
+
+input {
+    background: none;
+    border: none;
+    box-sizing: border-box;
+    color: inherit;
+    font: inherit;
+    outline: none;
+    padding: 0;
+    width: inherit;
+}

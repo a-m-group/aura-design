@@ -1,0 +1,54 @@
+{
+  "name": "@aura-group/aura-design-docs",
+  "version": "0.3.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "vite",
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "chromatic": "pnpm dlx chromatic --project-token=chpt_1b0a973d6a47c4a"
+  },
+  "author": {
+    "name": "@aura-group"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-actions": "^7.6.16",
+    "@storybook/addon-essentials": "^7.6.16",
+    "@storybook/addon-interactions": "^7.6.16",
+    "@storybook/addon-links": "^7.6.16",
+    "@storybook/blocks": "^7.6.16",
+    "@storybook/channels": "^7.6.16",
+    "@storybook/core-events": "^7.6.16",
+    "@storybook/html": "^7.6.16",
+    "@storybook/html-vite": "^7.6.16",
+    "@storybook/manager-api": "^7.6.16",
+    "@storybook/theming": "^7.6.16",
+    "@storybook/types": "^7.6.16",
+    "chromatic": "^10.9.6",
+    "eslint": "^8.36.0",
+    "eslint-config-aurai": "workspace:*",
+    "eslint-plugin-storybook": "^0.8.0",
+    "prettier": "^2.8.4",
+    "storybook": "^7.6.16",
+    "typescript": "^4.9.3",
+    "vite": "^4.0.4",
+    "vite-plugin-solid": "^2.5.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "dependencies": {
+    "@aura-group/aura-design": "workspace:*",
+    "@aura-group/aura-design-pro": "workspace:*",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "solid-js": "^1.6.11",
+    "unocss": "^0.57.4"
+  }
+}
