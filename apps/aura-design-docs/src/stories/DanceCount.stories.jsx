@@ -1,5 +1,5 @@
 export default {
-    title: 'Components/DanceCount',
+    title: 'Components/Data Display/DanceCount',
     tags: ['autodocs'],
     component: <ar-dance-count></ar-dance-count>,
     argTypes: {
