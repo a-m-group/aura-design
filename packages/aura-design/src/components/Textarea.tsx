@@ -41,7 +41,7 @@ export const Textarea = (props: TextareaProps, { element }: any) => {
         element.dispatchEvent(customEvent);
     };
     const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.keyCode === 13) {
+        if ((event.metaKey || event.ctrlKey) && event.key === 'Enter') {
             event.preventDefault();
             if (event.target) {
                 const target = event.target as HTMLTextAreaElement;
