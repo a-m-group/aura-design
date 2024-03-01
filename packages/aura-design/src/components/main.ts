@@ -1,6 +1,7 @@
 import Button from './Button';
 import Card from './Card';
 import ChatBubble from './ChatBubble';
+import CheckBox from './CheckBox';
 import DanceCount from './DanceCount';
 import DanceNumber from './DanceNumber';
 import FlexBox from './FlexBox';
@@ -20,6 +21,7 @@ export {
     Button,
     Card,
     ChatBubble,
+    CheckBox,
     DanceCount,
     DanceNumber,
     FlexBox,

@@ -3,13 +3,7 @@ import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
 
-import Radio from './Radio';
-import Button from './Button';
-
-import styles from './RadioGroup.css?inline';
-
-Radio();
-Button();
+import { css } from '../utils';
 
 interface RadioOption {
     label: string;
@@ -27,6 +21,64 @@ interface RadioGroupProps {
 }
 
 export function RadioGroup(props: RadioGroupProps, { element }: any): JSX.Element {
+    const styles = css`
+        .radio-buttons-container {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .radio-button {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+        }
+
+        .radio-button__input {
+            position: absolute;
+            opacity: 0;
+            width: 0;
+            height: 0;
+        }
+
+        .radio-button__label {
+            display: inline-block;
+            padding-left: 30px;
+            margin-bottom: 10px;
+            position: relative;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .radio-button__custom {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border: 2px solid #555;
+            transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .radio-button__input:checked + .radio-button__label .radio-button__custom {
+            transform: translateY(-50%) scale(0.9);
+            border: 5px solid #4c8bf5;
+            color: #4c8bf5;
+        }
+
+        .radio-button__input:checked + .radio-button__label {
+            color: #4c8bf5;
+        }
+
+        .radio-button__label:hover .radio-button__custom {
+            transform: translateY(-50%) scale(1.2);
+            border-color: #4c8bf5;
+            box-shadow: 0 0 10px #4c8bf580;
+        }
+    `;
     const [value, setValue] = createSignal(props.defaultValue || '');
 
     createEffect(() => {
@@ -43,27 +95,44 @@ export function RadioGroup(props: RadioGroupProps, { element }: any): JSX.Elemen
     return (
         <>
             <style>{styles}</style>
-            <ar-layout-row class="radio-group" gap="0">
-                <For each={props.options}>
-                    {(option) => {
-                        // console.log(option.label);
-                        if (props.type === 'button') {
-                            return (
-                                <ar-button
-                                    status={value() === option.value ? 'primary' : 'info'}
-                                    onClick={() => handleClick(option.value)}
-                                >
-                                    {option.label}
-                                    <Show when={option.props?.icon}>
-                                        <ar-icon size="1.2em" name={option.props?.icon}></ar-icon>
-                                    </Show>
-                                </ar-button>
-                            );
-                        }
-                        return <ar-radio value={option.value}>{option.label}</ar-radio>;
-                    }}
-                </For>
-            </ar-layout-row>
+            <div class="radio-buttons-container">
+                <div class="radio-button">
+                    <input
+                        name="radio-group"
+                        id="radio2"
+                        class="radio-button__input"
+                        type="radio"
+                    />
+                    <label for="radio2" class="radio-button__label">
+                        <span class="radio-button__custom"></span>
+                        Next
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input
+                        name="radio-group"
+                        id="radio1"
+                        class="radio-button__input"
+                        type="radio"
+                    />
+                    <label for="radio1" class="radio-button__label">
+                        <span class="radio-button__custom"></span>
+                        Svelte
+                    </label>
+                </div>
+                <div class="radio-button">
+                    <input
+                        name="radio-group"
+                        id="radio3"
+                        class="radio-button__input"
+                        type="radio"
+                    />
+                    <label for="radio3" class="radio-button__label">
+                        <span class="radio-button__custom"></span>
+                        Remix
+                    </label>
+                </div>
+            </div>
         </>
     );
 }

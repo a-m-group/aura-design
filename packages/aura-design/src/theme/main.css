@@ -4,7 +4,6 @@
     --accent-color: #fff;
     --accent-gradient: linear-gradient(45deg, #027aff, #7d64f9);
     --gap: 6px;
-    --input-height: 32px;
     --font-size: 14px;
     --border-radius: 3px;
     --round-radius: 20px;
@@ -13,4 +12,6 @@
     --error-color: #f94e3f;
     --info-color: var(--bg-2);
     --danger-color: #ff7473;
+    --input-height: 32px;
+    --checkbox-size: 23px;
 }
