@@ -14,6 +14,7 @@ import PlaceHolder from './PlaceHolder';
 import Radio from './Radio';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
+import Select from './Select';
 import Textarea from './Textarea';
 import Textfield from './Textfield';
 import Typewriter from './Typewriter';
@@ -34,6 +35,7 @@ export {
     Radio,
     RadioButton,
     RadioGroup,
+    Select,
     Textarea,
     Textfield,
     Typewriter,

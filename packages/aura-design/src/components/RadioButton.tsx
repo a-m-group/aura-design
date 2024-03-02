@@ -5,17 +5,17 @@ import { TAG_PREFIX } from './config';
 
 import { css } from '../utils';
 
-interface RadioOption {
+interface Option {
     label: string;
     value: string;
 }
-interface RadioGroupProps {
-    options?: RadioOption[];
+interface Props {
+    options?: Option[];
     value?: string;
     direction?: 'row' | 'column';
 }
 
-export const RadioButton = (props: RadioGroupProps, { element }: any) => {
+export const RadioButton = (props: Props, { element }: any) => {
     const styles = css`
         :host {
             display: inline-block;
