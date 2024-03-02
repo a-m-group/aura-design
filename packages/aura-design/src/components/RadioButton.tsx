@@ -1,39 +1,84 @@
-import { createSignal, For, JSX, createEffect, Show } from 'solid-js';
+import { createSignal, createEffect, For } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
 
-import Radio from './Radio';
-import Button from './Button';
-
-import styles from './RadioGroup.css?inline';
-
-Radio();
-Button();
+import { css } from '../utils';
 
 interface RadioOption {
     label: string;
     value: string;
-    props?: {
-        icon: string;
-    };
 }
 interface RadioGroupProps {
-    defaultValue?: string;
-    options: RadioOption[];
+    options?: RadioOption[];
     value?: string;
-    onChange?: (value: string) => void;
-    type: 'radio' | 'button';
+    direction?: 'row' | 'column';
 }
 
-export function RadioButton(props: RadioGroupProps, { element }: any): JSX.Element {
-    const [value, setValue] = createSignal(props.defaultValue || '');
+export const RadioButton = (props: RadioGroupProps, { element }: any) => {
+    const styles = css`
+        :host {
+            display: inline-block;
+            font-size: var(--font-size);
+        }
+
+        :focus {
+            outline: 0;
+        }
+
+        .root {
+            display: flex;
+            flex-direction: ${props.direction};
+            flex-wrap: nowrap;
+            justify-content: center;
+        }
+
+        .root input[type='radio'] {
+            clip: rect(0 0 0 0);
+            clip-path: inset(100%);
+            height: 1px;
+            overflow: hidden;
+            position: absolute;
+            white-space: nowrap;
+            width: 1px;
+        }
+
+        .root input[type='radio']:checked + span {
+            background-color: var(--primary-color);
+            z-index: 1;
+            color: var(--accent-color);
+        }
+
+        label span {
+            display: flex;
+            height: var(--input-height);
+            align-items: center;
+            cursor: pointer;
+            background-color: var(--bg-1);
+            padding: 0 0.75em;
+            position: relative;
+            box-shadow: 0 0 0 0.0625em var(--primary-color);
+            color: var(--text-color);
+            text-align: center;
+            transition: background-color 0.5s ease;
+        }
+
+        label:first-child span {
+            border-radius: var(--border-radius) 0 0 var(--border-radius);
+        }
+
+        label:last-child span {
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+    `;
+    const [value, setValue] = createSignal(props.value || '');
 
     createEffect(() => {
         const customEvent = new CustomEvent('change', {
             detail: {
                 value: value(),
             },
+            bubbles: true,
         });
         element.dispatchEvent(customEvent);
     });
@@ -43,41 +88,44 @@ export function RadioButton(props: RadioGroupProps, { element }: any): JSX.Eleme
     return (
         <>
             <style>{styles}</style>
-            <ar-layout-row class="radio-group" gap="0">
+            <div class="root">
                 <For each={props.options}>
-                    {(option) => {
-                        // console.log(option.label);
-                        if (props.type === 'button') {
-                            return (
-                                <ar-button
-                                    status={value() === option.value ? 'primary' : 'info'}
-                                    onClick={() => handleClick(option.value)}
-                                >
-                                    {option.label}
-                                    <Show when={option.props?.icon}>
-                                        <ar-icon size="1.2em" name={option.props?.icon}></ar-icon>
-                                    </Show>
-                                </ar-button>
-                            );
-                        }
-                        return <ar-radio value={option.value}>{option.label}</ar-radio>;
-                    }}
+                    {(option) => (
+                        <label onClick={() => handleClick(option.value)}>
+                            <input
+                                type="radio"
+                                name="radio"
+                                value={option.value}
+                                checked={value() === option.value}
+                            />
+                            <span>{option.label}</span>
+                        </label>
+                    )}
                 </For>
-            </ar-layout-row>
+            </div>
         </>
     );
-}
+};
 export default () => {
     customElement(
         `${TAG_PREFIX}-radio-button`,
         {
-            defaultValue: '',
-            options: [],
+            options: [
+                {
+                    label: 'Option1',
+                    value: '1',
+                },
+                {
+                    label: 'Option2',
+                    value: '2',
+                },
+                {
+                    label: 'Option3',
+                    value: '3',
+                },
+            ],
             value: '',
-            type: 'radio',
-            onChange: (value: string) => {
-                console.log(value);
-            },
+            direction: 'row',
         },
         RadioButton,
     );

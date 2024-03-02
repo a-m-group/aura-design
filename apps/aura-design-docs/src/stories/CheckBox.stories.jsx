@@ -12,3 +12,9 @@ export const Default = {
         value: false,
     },
 };
+
+export const DefaultValue = {
+    args: {
+        value: true,
+    },
+};

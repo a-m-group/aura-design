@@ -13,5 +13,6 @@
     --info-color: var(--bg-2);
     --danger-color: #ff7473;
     --input-height: 32px;
-    --checkbox-size: 23px;
+    --checkbox-size: 20px;
+    --radio-size: 20px;
 }

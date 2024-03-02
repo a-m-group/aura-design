@@ -103,7 +103,7 @@ export const CheckBox = (props: Props, { element }: any) => {
         <>
             <style>{styles}</style>
             <label class="container">
-                <input type="checkbox" value={value()} onChange={handleChange} />
+                <input type="checkbox" checked={value()} onChange={handleChange} />
                 <div class="checkmark"></div>
                 <slot></slot>
             </label>
