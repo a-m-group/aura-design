@@ -1,4 +1,4 @@
-import { createSignal, createEffect, For } from 'solid-js';
+import { createSignal, For } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -78,37 +78,34 @@ export const RadioGroup = (props: Props, { element }: any) => {
     `;
     const [value, setValue] = createSignal(props.value || '');
 
-    createEffect(() => {
+    const handleClick = (value: string) => {
+        setValue(value);
         const customEvent = new CustomEvent('change', {
             detail: {
-                value: value(),
+                value,
             },
             bubbles: true,
         });
         element.dispatchEvent(customEvent);
-    });
-    const handleClick = (value: string) => {
-        setValue(value);
     };
     return (
         <>
             <style>{styles}</style>
             <div class="root">
                 <For each={props.options}>
-                    {(option, index) => (
+                    {(option) => (
                         <div class="radio-button" onClick={() => handleClick(option.value)}>
                             <input
                                 name="radio-group"
-                                id={`radio-${index()}`}
                                 class="radio-button__input"
                                 type="radio"
                                 value={option.value}
                                 checked={value() === option.value}
                             />
-                            <label for={`radio-${index()}`} class="radio-button__label">
+                            <div class="radio-button__label">
                                 <span class="radio-button__custom"></span>
                                 {option.label}
-                            </label>
+                            </div>
                         </div>
                     )}
                 </For>

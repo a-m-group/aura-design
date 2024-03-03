@@ -3,6 +3,7 @@
     border-radius: var(--border-radius);
     display: inline-flex;
     height: var(--input-height);
+    min-width: 3rem;
 }
 
 button {
@@ -18,6 +19,7 @@ button {
     gap: var(--gap);
     height: inherit;
     justify-content: center;
+    min-width: inherit;
     outline: none;
     padding: 0 12px;
     width: inherit;

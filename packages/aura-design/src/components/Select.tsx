@@ -51,7 +51,7 @@ export const Select = (props: Props, { element }: any) => {
             margin: 0;
             padding: 0;
             list-style: none;
-            z-index: 1;
+            z-index: 10;
             position: absolute;
             top: ${props.placement === 'bottom' ? '100%' : 0};
             bottom: ${props.placement === 'top' ? '100%' : 0};
@@ -100,20 +100,18 @@ export const Select = (props: Props, { element }: any) => {
     const selected = createMemo(
         () => props.options?.filter((item) => item.value === value()) || [],
     );
-    createEffect(() => {
-        const customEvent = new CustomEvent('change', {
-            detail: {
-                value: value(),
-            },
-            bubbles: true,
-        });
-        element.dispatchEvent(customEvent);
-    });
     const handleClick = () => {
         setOpen(!open());
     };
     const handleChange = (option: Option) => {
         setValue(option.value);
+        const customEvent = new CustomEvent('change', {
+            detail: {
+                value: option.value,
+            },
+            bubbles: true,
+        });
+        element.dispatchEvent(customEvent);
     };
     return (
         <>

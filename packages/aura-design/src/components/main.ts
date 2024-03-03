@@ -11,7 +11,6 @@ import ImageCard from './ImageCard';
 import LayoutGrid from './layout/Grid';
 import LayoutHoly from './layout/Holy';
 import PlaceHolder from './PlaceHolder';
-import Radio from './Radio';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
 import Select from './Select';
@@ -32,7 +31,6 @@ export {
     LayoutGrid,
     LayoutHoly,
     PlaceHolder,
-    Radio,
     RadioButton,
     RadioGroup,
     Select,

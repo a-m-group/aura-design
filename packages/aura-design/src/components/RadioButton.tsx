@@ -1,4 +1,4 @@
-import { createSignal, createEffect, For } from 'solid-js';
+import { createSignal, For } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -49,7 +49,7 @@ export const RadioButton = (props: Props, { element }: any) => {
             color: var(--accent-color);
         }
 
-        label span {
+        .label span {
             display: flex;
             height: var(--input-height);
             align-items: center;
@@ -63,27 +63,24 @@ export const RadioButton = (props: Props, { element }: any) => {
             transition: background-color 0.5s ease;
         }
 
-        label:first-child span {
+        .label:first-child span {
             border-radius: var(--border-radius) 0 0 var(--border-radius);
         }
 
-        label:last-child span {
+        .label:last-child span {
             border-radius: 0 var(--border-radius) var(--border-radius) 0;
         }
     `;
     const [value, setValue] = createSignal(props.value || '');
-
-    createEffect(() => {
+    const handleClick = (value: string) => {
+        setValue(value);
         const customEvent = new CustomEvent('change', {
             detail: {
-                value: value(),
+                value,
             },
             bubbles: true,
         });
         element.dispatchEvent(customEvent);
-    });
-    const handleClick = (value: string) => {
-        setValue(value);
     };
     return (
         <>
@@ -91,7 +88,7 @@ export const RadioButton = (props: Props, { element }: any) => {
             <div class="root">
                 <For each={props.options}>
                     {(option) => (
-                        <label onClick={() => handleClick(option.value)}>
+                        <div class="label" onClick={() => handleClick(option.value)}>
                             <input
                                 type="radio"
                                 name="radio"
@@ -99,7 +96,7 @@ export const RadioButton = (props: Props, { element }: any) => {
                                 checked={value() === option.value}
                             />
                             <span>{option.label}</span>
-                        </label>
+                        </div>
                     )}
                 </For>
             </div>
