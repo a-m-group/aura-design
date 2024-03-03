@@ -118,6 +118,7 @@ button:hover {
 
 .circle {
     border-radius: 50%;
+    min-width: auto;
     padding: 0 2px;
     width: var(--input-height);
 }
