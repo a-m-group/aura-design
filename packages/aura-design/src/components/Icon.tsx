@@ -1,5 +1,6 @@
 import { customElement } from 'solid-element';
 import { TAG_PREFIX } from './config';
+import iconfont from '../assets/iconfont.svg';
 import styles from './Icon.css?inline';
 
 export type Props = {
@@ -27,7 +28,7 @@ export const Icon = (props: Props) => {
                 fill={props.color}
                 aria-hidden="true"
             >
-                <use href={`${__href}#icon-${props.name}`}></use>
+                <use href={`${__href || iconfont}#icon-${props.name}`}></use>
             </svg>
         </>
     );

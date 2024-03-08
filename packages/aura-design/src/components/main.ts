@@ -10,6 +10,7 @@ import Icon from './Icon';
 import ImageCard from './ImageCard';
 import LayoutGrid from './layout/Grid';
 import LayoutHoly from './layout/Holy';
+import LayoutMasonry from './layout/Masonry';
 import PlaceHolder from './PlaceHolder';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
@@ -30,6 +31,7 @@ export {
     ImageCard,
     LayoutGrid,
     LayoutHoly,
+    LayoutMasonry,
     PlaceHolder,
     RadioButton,
     RadioGroup,

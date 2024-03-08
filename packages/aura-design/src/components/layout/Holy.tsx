@@ -5,7 +5,7 @@ import { TAG_PREFIX } from '../config';
 
 import styles from './Holy.css?inline';
 
-export const Counter: Component = () => {
+export const Holy: Component = () => {
     return (
         <>
             <style>{styles}</style>
@@ -19,5 +19,5 @@ export const Counter: Component = () => {
 };
 
 export default () => {
-    customElement(`${TAG_PREFIX}-layout-holy`, Counter);
+    customElement(`${TAG_PREFIX}-layout-holy`, Holy);
 };
