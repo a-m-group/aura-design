@@ -1,14 +1,7 @@
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
     title: 'Components/Data Entry/RadioButton',
     tags: ['autodocs'],
     component: <ar-radio-button></ar-radio-button>,
-    parameters: {
-        actions: {
-            handles: ['change'],
-        },
-    },
-    decorators: [withActions],
     argTypes: {
         value: { control: 'text' },
         direction: { control: 'select', options: ['row', 'column'] },

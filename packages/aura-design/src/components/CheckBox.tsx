@@ -89,13 +89,13 @@ export const CheckBox = (props: Props, { element }: any) => {
         }
     `;
     const [value, setValue] = createSignal(props.value);
-    const handleChange = (event: Event) => {
+    const handleChange = () => {
         setValue(!value());
-        const target = event.target as HTMLInputElement;
         const customEvent = new CustomEvent('change', {
             detail: {
-                value: target.value,
+                value: value(),
             },
+            bubbles: true,
         });
         element.dispatchEvent(customEvent);
     };
@@ -103,7 +103,7 @@ export const CheckBox = (props: Props, { element }: any) => {
         <>
             <style>{styles}</style>
             <label class="container">
-                <input type="checkbox" checked={value()} onChange={handleChange} />
+                <input type="checkbox" onChange={handleChange} />
                 <div class="checkmark"></div>
                 <slot></slot>
             </label>

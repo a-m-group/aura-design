@@ -1,14 +1,7 @@
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
     title: 'Components/Data Entry/RadioGroup',
     tags: ['autodocs'],
     component: <ar-radio-group></ar-radio-group>,
-    parameters: {
-        actions: {
-            handles: ['change'],
-        },
-    },
-    decorators: [withActions],
     argTypes: {
         value: { control: 'text' },
         direction: { control: 'select', options: ['row', 'column'] },

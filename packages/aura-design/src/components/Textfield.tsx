@@ -17,18 +17,20 @@ export const Textfield = (props: TextfieldProps, { element }: any) => {
             detail: {
                 value: target.value,
             },
+            bubbles: true,
         });
         element.dispatchEvent(customEvent);
     };
     const handleKeyDown = (event: KeyboardEvent) => {
-        if (event.keyCode === 13) {
+        if (event.key === 'Enter') {
             event.preventDefault();
             if (event.target) {
-                const target = event.target as HTMLTextAreaElement;
+                const target = event.target as HTMLInputElement;
                 const customEvent = new CustomEvent('enter', {
                     detail: {
                         value: target.value,
                     },
+                    bubbles: true,
                 });
                 element.dispatchEvent(customEvent);
             }

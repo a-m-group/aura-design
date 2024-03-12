@@ -1,14 +1,7 @@
-import { withActions } from '@storybook/addon-actions/decorator';
 export default {
     title: 'Components/Data Entry/Select',
     tags: ['autodocs'],
     component: <ar-select></ar-select>,
-    parameters: {
-        actions: {
-            handles: ['change'],
-        },
-    },
-    decorators: [withActions],
     argTypes: {
         value: { control: 'text' },
         placement: { control: 'select', options: ['top', 'bottom'] },
