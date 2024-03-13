@@ -1,24 +1,11 @@
-.copy {
-  direction: ltr;
-  position: absolute;
-  bottom: 1em;
-  right: 1em;
-  z-index: 3;
-  display: block;
-  justify-content: center;
+.title-chip {
+  display: flex;
   align-items: center;
-  opacity: 0;
-  cursor: pointer;
-}
-
-pre:hover > .copy,
-.copy:focus {
-  opacity: 1;
+  justify-content: space-between;
+  padding: 6px 12px;
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .lang {
   color: var(--text-color);
-  position: absolute;
-  top: 1em;
-  right: 1em;
 }

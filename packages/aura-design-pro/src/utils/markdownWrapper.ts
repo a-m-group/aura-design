@@ -13,7 +13,11 @@ export default function markdownWrapper(md: MarkdownIt) {
         const rawCode = fence(...args);
         return rawCode.replace(
             '<pre>',
-            `<pre style="position: relative"><span class="lang">${lang}</span><ar-button class="copy" type="outline" shape="round">copy</ar-button>`,
+            `<pre>
+                <div class="title-chip hljs">
+                    <span class="lang">${lang}</span>
+                    <ar-button class="copy" type="text">copy</ar-button>
+                </div>`,
         );
     };
 }

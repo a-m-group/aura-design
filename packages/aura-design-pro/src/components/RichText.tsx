@@ -29,7 +29,8 @@ export const RichText = (props: Props, { element }: any) => {
         element.shadowRoot.addEventListener('click', (e: Event) => {
             const el = e.target as HTMLElement;
             if (el.matches('.copy')) {
-                const sibling = el.nextElementSibling as HTMLPreElement | null;
+                const parent = element.shadowRoot.querySelector('.title-chip');
+                const sibling = parent.nextElementSibling as HTMLPreElement | null;
                 if (!parent || !sibling) {
                     return;
                 }
