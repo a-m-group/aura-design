@@ -1,4 +1,3 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from '../config';
@@ -10,7 +9,7 @@ type Props = {
     count: string | number;
     gap: string;
 };
-export const Masonry: Component = (props: Props) => {
+export const Masonry = (props: Props) => {
     const styles = css`
         .root {
             column-width: ${props.width};

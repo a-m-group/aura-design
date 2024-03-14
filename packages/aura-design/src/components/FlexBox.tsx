@@ -1,4 +1,3 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -19,7 +18,7 @@ export interface Props {
         | 'space-evenly';
 }
 
-export const FlexBox: Component<Props> = (props: Props) => {
+export const FlexBox = (props: Props) => {
     const styles = css`
         :host {
             display: flex;

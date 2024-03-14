@@ -1,4 +1,3 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from '../config';
@@ -15,7 +14,7 @@ export interface Props {
     min: string | number;
 }
 
-export const Grid: Component<Props> = (props) => {
+export const Grid = (props: Props) => {
     const styles = css`
         .grid-layout {
             --cols: ${props.cols};

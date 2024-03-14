@@ -1,11 +1,10 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from '../config';
 
 import styles from './Holy.css?inline';
 
-export const Holy: Component = () => {
+export const Holy = () => {
     return (
         <>
             <style>{styles}</style>

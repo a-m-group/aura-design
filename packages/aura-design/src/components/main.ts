@@ -12,6 +12,7 @@ import LayoutGrid from './layout/Grid';
 import LayoutHoly from './layout/Holy';
 import LayoutMasonry from './layout/Masonry';
 import PlaceHolder from './PlaceHolder';
+import Popover from './Popover';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
 import Select from './Select';
@@ -33,6 +34,7 @@ export {
     LayoutHoly,
     LayoutMasonry,
     PlaceHolder,
+    Popover,
     RadioButton,
     RadioGroup,
     Select,

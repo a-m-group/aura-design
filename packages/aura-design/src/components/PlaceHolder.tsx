@@ -1,11 +1,10 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
 
 import { css } from '../utils';
 
-export const PlaceHolder: Component = () => {
+export const PlaceHolder = () => {
     const styles = css`
         :host {
             display: block;

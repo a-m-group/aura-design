@@ -1,4 +1,3 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -11,7 +10,7 @@ interface CardProps {
     imageUrl: string;
 }
 
-export const Card: Component<CardProps> = (props) => {
+export const Card = (props: CardProps) => {
     return (
         <>
             <style>{styles}</style>

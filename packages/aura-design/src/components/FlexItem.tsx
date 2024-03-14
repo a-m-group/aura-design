@@ -1,4 +1,3 @@
-import type { Component } from 'solid-js';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -11,7 +10,7 @@ export interface Props {
     self?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch';
 }
 
-export const FlexItem: Component<Props> = (props: Props) => {
+export const FlexItem = (props: Props) => {
     const styles = css`
         :host {
             order: ${props.order};
