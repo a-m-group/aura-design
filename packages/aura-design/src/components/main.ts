@@ -13,6 +13,7 @@ import LayoutHoly from './layout/Holy';
 import LayoutMasonry from './layout/Masonry';
 import PlaceHolder from './PlaceHolder';
 import Popover from './Popover';
+import Portal from './Portal';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
 import Select from './Select';
@@ -35,6 +36,7 @@ export {
     LayoutMasonry,
     PlaceHolder,
     Popover,
+    Portal,
     RadioButton,
     RadioGroup,
     Select,
