@@ -6,6 +6,17 @@
   border-bottom: 1px solid #e5e7eb;
 }
 
+.lang-chip {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.browser {
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .lang {
   color: var(--text-color);
 }

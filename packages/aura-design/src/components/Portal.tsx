@@ -14,7 +14,8 @@ export const Portal = ({ content, src }: Props, { element }: any) => {
         :host {
             display: block;
             width: 100%;
-            background: var(--bg-1);
+            height: 100%;
+            background: rgba(255, 255, 255, 0.95);
         }
         #iframe {
             width: inherit;

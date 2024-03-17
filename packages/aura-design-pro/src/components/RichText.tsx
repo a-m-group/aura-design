@@ -46,6 +46,21 @@ export const RichText = (props: Props, { element }: any) => {
                     timeoutIdMap.set(el, timeoutId);
                 });
             }
+            if (el.matches('.browser')) {
+                const parent = element.shadowRoot.querySelector('.title-chip');
+                const sibling = parent.nextElementSibling as HTMLPreElement | null;
+                if (!parent || !sibling) {
+                    return;
+                }
+                const text = sibling.innerText;
+                const customEvent = new CustomEvent('browser', {
+                    detail: {
+                        value: text,
+                    },
+                    bubbles: true,
+                });
+                element.dispatchEvent(customEvent);
+            }
         });
     });
     return (

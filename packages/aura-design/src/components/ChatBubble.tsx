@@ -16,7 +16,7 @@ type Props = {
     direction?: 'row' | 'column';
 };
 
-export const ChatBubble = (props: Props) => {
+export const ChatBubble = (props: Props, { element }: any) => {
     const styles = css`
         :host {
             display: block;
@@ -58,6 +58,15 @@ export const ChatBubble = (props: Props) => {
             min-width: 30px;
         }
     `;
+    const handleBrowser = (e: CustomEvent) => {
+        const customEvent = new CustomEvent('browser', {
+            detail: {
+                value: e.detail.value,
+            },
+            bubbles: true,
+        });
+        element.dispatchEvent(customEvent);
+    };
     return (
         <>
             <style>
@@ -87,7 +96,12 @@ export const ChatBubble = (props: Props) => {
                 <div class="chat-content p-x-3 rd-3">
                     <Show
                         when={props.loading}
-                        fallback={<ar-rich-text text={props.content}></ar-rich-text>}
+                        fallback={
+                            <ar-rich-text
+                                onBrowser={handleBrowser}
+                                text={props.content}
+                            ></ar-rich-text>
+                        }
                     >
                         <div class="flex items-center gap-3">
                             <p>{props.loadingText}</p>

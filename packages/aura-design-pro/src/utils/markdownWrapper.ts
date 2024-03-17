@@ -15,7 +15,14 @@ export default function markdownWrapper(md: MarkdownIt) {
             '<pre>',
             `<pre>
                 <div class="title-chip hljs">
-                    <span class="lang">${lang}</span>
+                    <div class="lang-chip">
+                        <span class="lang">${lang}</span>
+                        ${
+                            lang === 'html'
+                                ? '<ar-icon class="browser" name="browser"></ar-icon>'
+                                : ''
+                        }
+                    </div>
                     <ar-button class="copy" type="text">copy</ar-button>
                 </div>`,
         );

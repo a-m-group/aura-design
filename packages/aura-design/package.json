@@ -1,6 +1,6 @@
 {
   "name": "@aura-group/aura-design",
-  "version": "0.3.13",
+  "version": "0.3.16",
   "description": "",
   "main": "dist/aura-design.umd.js",
   "module": "dist/aura-design.es.js",

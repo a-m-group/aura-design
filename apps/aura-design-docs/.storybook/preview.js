@@ -51,7 +51,7 @@ export const parameters = {
         },
     },
     actions: {
-        handles: ['change', 'enter'],
+        handles: ['change', 'enter', 'browser'],
     },
     // actions: { argTypesRegex: '^on[A-Z].*' },
     controls: {
