@@ -6,6 +6,7 @@ import DanceCount from './DanceCount';
 import DanceNumber from './DanceNumber';
 import FlexBox from './FlexBox';
 import FlexItem from './FlexItem';
+import FloatWrapper from './FloatWrapper';
 import Icon from './Icon';
 import ImageCard from './ImageCard';
 import LayoutGrid from './layout/Grid';
@@ -29,6 +30,7 @@ export {
     DanceNumber,
     FlexBox,
     FlexItem,
+    FloatWrapper,
     Icon,
     ImageCard,
     LayoutGrid,

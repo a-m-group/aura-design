@@ -116,10 +116,10 @@ button:hover {
 }
 
 .circle {
+    aspect-ratio: 1 / 1;
     border-radius: 50%;
     min-width: auto;
     padding: 0 2px;
-    width: var(--input-height);
 }
 
 .round {
