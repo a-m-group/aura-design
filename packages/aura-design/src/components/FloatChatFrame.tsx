@@ -7,10 +7,10 @@ import { TAG_PREFIX } from './config';
 import styles from './FloatChatFrame.module.css';
 
 interface Props {
-    left: string | null;
-    top: string | null;
-    right: string | null;
-    bottom: string | null;
+    left: string;
+    top: string;
+    right: string;
+    bottom: string;
     src: string;
 }
 
@@ -65,11 +65,11 @@ export default () => {
     customElement(
         `${TAG_PREFIX}-float-chat-frame`,
         {
-            left: null,
-            top: null,
-            right: null,
-            bottom: null,
-            src: 'https://a-m.love/zh-cn/',
+            left: '',
+            top: '',
+            right: '',
+            bottom: '',
+            src: '',
         },
         FloatChatFrame,
     );
