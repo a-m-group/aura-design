@@ -7,6 +7,8 @@ export default {
         top: { control: 'text' },
         right: { control: 'text' },
         bottom: { control: 'text' },
+        icon: { control: 'text' },
+        text: { control: 'text' },
     },
 };
 
@@ -16,5 +18,7 @@ export const Default = {
         top: '',
         right: '10px',
         bottom: '10px',
+        icon: '',
+        text: 'Button',
     },
 };

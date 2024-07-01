@@ -17,6 +17,6 @@ export const Default = {
         top: '',
         right: '40px',
         bottom: '40px',
-        src: '',
+        src: 'https://a-m.love/',
     },
 };
