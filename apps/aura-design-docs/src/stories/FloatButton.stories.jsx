@@ -1,5 +1,5 @@
 export default {
-    title: 'Components/FloatButton',
+    title: 'Components/Float/FloatButton',
     tags: ['autodocs'],
     component: <ar-float-button></ar-float-button>,
     argTypes: {
