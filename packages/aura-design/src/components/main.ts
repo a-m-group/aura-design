@@ -6,6 +6,8 @@ import DanceCount from './DanceCount';
 import DanceNumber from './DanceNumber';
 import FlexBox from './FlexBox';
 import FlexItem from './FlexItem';
+import FloatButton from './FloatButton';
+import FloatChatFrame from './FloatChatFrame';
 import FloatWrapper from './FloatWrapper';
 import Icon from './Icon';
 import ImageCard from './ImageCard';
@@ -30,6 +32,8 @@ export {
     DanceNumber,
     FlexBox,
     FlexItem,
+    FloatButton,
+    FloatChatFrame,
     FloatWrapper,
     Icon,
     ImageCard,

@@ -5,13 +5,17 @@ import { TAG_PREFIX } from './config';
 import { css } from '../utils';
 
 interface Props {
-    left: number;
-    top: number;
+    left: string | null;
+    top: string | null;
+    right: string | null;
+    bottom: string | null;
 }
 
 export const FloatWrapper = (props: Props, { element }: any) => {
-    const [left, setLeft] = createSignal(props.left);
-    const [top, setTop] = createSignal(props.top);
+    const [left, setLeft] = createSignal(0);
+    const [top, setTop] = createSignal(0);
+    const [moved, setMoved] = createSignal(false);
+    const [rootRef, setRootRef] = createSignal<HTMLDivElement>();
 
     const styles = css`
         .root {
@@ -29,6 +33,10 @@ export const FloatWrapper = (props: Props, { element }: any) => {
     let isDragging = false;
 
     onMount(() => {
+        const rect = rootRef()?.getBoundingClientRect();
+        console.log(rect);
+        setLeft(rect?.x || 0);
+        setTop(rect?.y || 0);
         element.shadowRoot.addEventListener('mousedown', handleDragStart);
         element.shadowRoot.addEventListener('mousemove', handleDragMove);
     });
@@ -53,7 +61,11 @@ export const FloatWrapper = (props: Props, { element }: any) => {
 
     const handleDragMove = (e: MouseEvent | TouchEvent) => {
         if (isDragging) {
+            // const rect = rootRef()?.getBoundingClientRect();
+            // const startX = rect?.x || 0;
+            // const startY = rect?.y || 0;
             if (e instanceof MouseEvent) {
+                console.log(e.clientX - posX);
                 setLeft(e.clientX - posX);
                 setTop(e.clientY - posY);
             } else if (e instanceof TouchEvent) {
@@ -61,6 +73,7 @@ export const FloatWrapper = (props: Props, { element }: any) => {
                 setLeft(touch.clientX - posX);
                 setTop(touch.clientY - posY);
             }
+            setMoved(true);
         }
     };
 
@@ -80,16 +93,24 @@ export const FloatWrapper = (props: Props, { element }: any) => {
         window.removeEventListener('touchmove', handleDragMove);
         window.removeEventListener('touchend', handleDragEnd);
     });
-
     return (
         <>
             <style>{styles}</style>
             <div
+                ref={setRootRef}
                 class="root"
-                style={{
-                    left: left() + 'px',
-                    top: top() + 'px',
-                }}
+                style={
+                    moved()
+                        ? {
+                              transform: `translate(${left()}px, ${top()}px)`,
+                          }
+                        : {
+                              left: props.left ? `${props.left}` : 'auto',
+                              top: props.top ? `${props.top}` : 'auto',
+                              right: props.right ? `${props.right}` : 'auto',
+                              bottom: props.bottom ? `${props.bottom}` : 'auto',
+                          }
+                }
                 onMouseDown={handleDragStart}
                 onMouseMove={handleDragMove}
                 onMouseUp={handleDragEnd}
@@ -104,5 +125,9 @@ export const FloatWrapper = (props: Props, { element }: any) => {
 };
 
 export default () => {
-    customElement(`${TAG_PREFIX}-float-wrapper`, { left: 0, top: 0 }, FloatWrapper);
+    customElement(
+        `${TAG_PREFIX}-float-wrapper`,
+        { left: null, top: null, right: null, bottom: null },
+        FloatWrapper,
+    );
 };

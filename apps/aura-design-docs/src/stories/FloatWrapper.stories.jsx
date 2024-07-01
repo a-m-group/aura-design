@@ -9,14 +9,14 @@ export default {
         </ar-float-wrapper>
     ),
     argTypes: {
-        left: { control: 'number' },
-        top: { control: 'number' },
+        left: { control: 'text' },
+        top: { control: 'text' },
     },
 };
 
 export const Default = {
     args: {
-        left: 0,
-        top: 0,
+        left: '0px',
+        top: '0px',
     },
 };
