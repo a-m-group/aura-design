@@ -20,12 +20,12 @@ export const Select = (props: Props, { element }: any) => {
     const styles = css`
         :host {
             align-items: center;
-            background-color: var(--bg-2);
-            border-radius: var(--border-radius);
+            background-color: var(--ar-color-info-2);
+            border-radius: var(--ar-size-3);
             box-sizing: border-box;
             display: inline-flex;
-            gap: var(--gap);
-            height: var(--input-height);
+            gap: var(--ar-size-6);
+            height: var(--ar-size-m);
             width: 100%;
         }
 
@@ -67,7 +67,7 @@ export const Select = (props: Props, { element }: any) => {
         }
 
         .root > ul li {
-            color: var(--text-color);
+            color: var(--ar-color-text);
             background: #fff;
             padding: 6px 12px;
             cursor: pointer;
@@ -76,16 +76,16 @@ export const Select = (props: Props, { element }: any) => {
         }
 
         .root > ul li:first-child {
-            border-radius: var(--border-radius) var(--border-radius) 0 0;
+            border-radius: var(--ar-size-3) var(--ar-size-3) 0 0;
         }
 
         .root > ul li:last-child {
-            border-radius: 0 0 var(--border-radius) var(--border-radius);
+            border-radius: 0 0 var(--ar-size-3) var(--ar-size-3);
         }
 
         .root > ul li:hover {
-            background: var(--primary-color);
-            color: var(--accent-color);
+            background: var(--ar-color-primary);
+            color: var(--ar-color-white);
         }
 
         .root.open > ul {

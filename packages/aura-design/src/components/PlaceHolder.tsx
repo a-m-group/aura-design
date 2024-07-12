@@ -8,7 +8,7 @@ export const PlaceHolder = () => {
     const styles = css`
         :host {
             display: block;
-            background: var(--gray-3);
+            background: var(--ar-color-info-3);
         }
         .place-holder {
             height: inherit;

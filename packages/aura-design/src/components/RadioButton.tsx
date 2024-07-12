@@ -19,7 +19,7 @@ export const RadioButton = (props: Props, { element }: any) => {
     const styles = css`
         :host {
             display: inline-block;
-            font-size: var(--font-size);
+            font-size: var(--ar-size-font);
         }
 
         :focus {
@@ -44,31 +44,32 @@ export const RadioButton = (props: Props, { element }: any) => {
         }
 
         .root input[type='radio']:checked + span {
-            background-color: var(--primary-color);
+            box-shadow: 0 0 0 1px var(--ar-color-primary);
+            background: var(--ar-color-primary-gradient);
             z-index: 1;
-            color: var(--accent-color);
+            color: var(--ar-color-white);
         }
 
         .label span {
             display: flex;
-            height: var(--input-height);
+            height: var(--ar-size-m);
             align-items: center;
             cursor: pointer;
-            background-color: var(--bg-1);
+            background-color: var(--ar-color-bg-1);
             padding: 0 0.75em;
             position: relative;
-            box-shadow: 0 0 0 0.0625em var(--primary-color);
-            color: var(--text-color);
+            box-shadow: 0 0 0 1px var(--ar-color-border);
+            color: var(--ar-color-text);
             text-align: center;
             transition: background-color 0.5s ease;
         }
 
         .label:first-child span {
-            border-radius: var(--border-radius) 0 0 var(--border-radius);
+            border-radius: var(--ar-size-3) 0 0 var(--ar-size-3);
         }
 
         .label:last-child span {
-            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            border-radius: 0 var(--ar-size-3) var(--ar-size-3) 0;
         }
     `;
     const [value, setValue] = createSignal(props.value || '');

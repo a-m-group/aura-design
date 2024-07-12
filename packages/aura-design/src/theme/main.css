@@ -1,18 +1,48 @@
 :root {
-    --primary-color: rgb(113 103 249);
-    --secondary-color: rgb(74 110 252);
-    --accent-color: #fff;
-    --accent-gradient: linear-gradient(45deg, #027aff, #7d64f9);
-    --gap: 6px;
-    --font-size: 14px;
-    --border-radius: 3px;
-    --round-radius: 20px;
-    --success-color: #00CD6B;
-    --warning-color: #FFC93D;
-    --error-color: #f94e3f;
-    --info-color: var(--bg-2);
-    --danger-color: #ff7473;
-    --input-height: 32px;
-    --checkbox-size: 20px;
-    --radio-size: 16px;
+    /* color */
+    --ar-color-white: #fff;
+    --ar-color-black: #000;
+    --ar-color-primary: rgb(125 100 249);
+    --ar-color-secondary: rgb(2 122 255);
+    --ar-color-primary-gradient: linear-gradient(45deg, var(--ar-color-secondary), var(--ar-color-primary));
+    --ar-color-success: #00CD6B;
+    --ar-color-warning: #FFC93D;
+    --ar-color-info: var(--ar-color-bg-2);
+    --ar-color-danger: #ff7473;
+
+    /* shadow */
+    --ar-shadow: var(--ar-shadow-1);
+    --ar-shadow-1: 0 -2px 5px rgb(0 0 0 / 10%);
+    --ar-shadow-2: 0 0 10px rgb(0 0 0 / 10%);
+    --ar-shadow-3: 0 0 20px rgb(0 0 0 / 10%);
+
+    /* size */
+    --ar-size-xs: 24px;
+    --ar-size-s: 28px;
+    --ar-size-m: 32px;
+    --ar-size-l: 36px;
+
+    /* font size */
+    --ar-size-font: 14px;
+    --ar-size-font-s: 13px;
+    --ar-size-font-xs: 12px;
+    --ar-size-font-l: 16px;
+    --ar-size-font-xl: 18px;
+    --ar-size-font-2xl: 20px;
+    --ar-size-font-3xl: 24px;
+
+    /* other */
+    --ar-size-0: 0;
+    --ar-size-1: 1px;
+    --ar-size-2: 2px;
+    --ar-size-3: 3px;
+    --ar-size-6: 6px;
+    --ar-size-9: 9px;
+    --ar-size-12: 12px;
+    --ar-size-15: 15px;
+    --ar-size-18: 18px;
+    --ar-size-21: 21px;
+    --ar-size-24: 24px;
+    --ar-size-27: 27px;
+    --ar-size-30: 30px;
 }

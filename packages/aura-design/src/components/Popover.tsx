@@ -30,7 +30,7 @@ export const Popover = (props: Props, { element }: any) => {
             visibility: hidden;
             font-size: 14px;
             transition: all 0.3s ease;
-            background-color: var(--bg-2);
+            background-color: var(--ar-color-bg-2);
         }
         .popover.show {
             opacity: 1;

@@ -38,7 +38,7 @@ export const ChatBubble = (props: Props, { element }: any) => {
         }
 
         .chat-bubble.right .chat-content {
-            background-image: var(--accent-gradient);
+            background: var(--ar-color-primary-gradient);
             color: #fff;
             border-top-right-radius: 0;
             align-self: ${props.direction === 'row' ? 'center' : 'flex-end'};
@@ -50,7 +50,7 @@ export const ChatBubble = (props: Props, { element }: any) => {
 
         .chat-bubble.left .chat-content {
             border-top-left-radius: 0;
-            background-color: var(--bg-2);
+            background-color: var(--ar-color-bg-2);
             align-self: ${props.direction === 'row' ? 'center' : 'flex-start'};
         }
 

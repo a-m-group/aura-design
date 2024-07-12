@@ -22,10 +22,10 @@ export const Card = (props: Props) => {
             display: block;
         }
         .bg-1 {
-            background-color: var(--bg-1);
-            box-shadow: ${props.shadow === 'always' ? 'var(--box-shadow)' : 'none'};
+            background-color: var(--ar-color-bg-1);
+            box-shadow: ${props.shadow === 'always' ? 'var(--ar-shadow)' : 'none'};
             &:hover {
-                box-shadow: ${props.shadow === 'never' ? 'none' : 'var(--box-shadow)'};
+                box-shadow: ${props.shadow === 'never' ? 'none' : 'var(--ar-shadow)'};
             }
         }
     `;
@@ -59,7 +59,7 @@ export const Card = (props: Props) => {
                 <Show when={props.header}>
                     <slot
                         class="flex items-center p-3 gap-3"
-                        style="border-bottom: 1px solid var(--gray-2)"
+                        style="border-bottom: 1px solid var( --ar-color-info-2)"
                         name="header"
                     ></slot>
                 </Show>
@@ -68,7 +68,7 @@ export const Card = (props: Props) => {
                     <slot
                         name="footer"
                         class="flex items-center p-3 gap-3"
-                        style="border-top: 1px solid var(--gray-2)"
+                        style="border-top: 1px solid var( --ar-color-info-2)"
                     >
                         {defaultFooter()}
                     </slot>

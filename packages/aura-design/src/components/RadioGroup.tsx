@@ -26,8 +26,8 @@ export const RadioGroup = (props: Props, { element }: any) => {
             flex-direction: ${props.direction};
             align-items: center;
             gap: 16px;
-            font-size: var(--font-size);
-            color: var(--text-color);
+            font-size: var(--ar-size-font);
+            color: var(--ar-color-text);
         }
 
         .radio-button {
@@ -47,33 +47,35 @@ export const RadioGroup = (props: Props, { element }: any) => {
         .radio-button__label {
             display: inline-flex;
             align-items: center;
-            gap: var(--gap);
+            gap: var(--ar-size-6);
             position: relative;
             cursor: pointer;
             transition: all 0.3s ease;
         }
 
         .radio-button__custom {
-            width: var(--radio-size);
-            height: var(--radio-size);
+            width: var(--ar-size-18);
+            height: var(--ar-size-18);
             border-radius: 50%;
-            border: 2px solid var(--bg-2);
+            border: 2px solid var(--ar-color-border);
+            background: var(--ar-color-info-2);
             transition: all 0.3s ease;
+            box-sizing: border-box;
         }
 
         .radio-button__input:checked + .radio-button__label .radio-button__custom {
-            background-color: var(--primary-color);
+            background: var(--ar-color-primary-gradient);
             border-color: transparent;
             transform: scale(0.9);
         }
 
         .radio-button__input:checked + .radio-button__label {
-            color: var(--primary-color);
+            color: var(--ar-color-primary);
         }
 
         .radio-button__label:hover .radio-button__custom {
             transform: scale(1);
-            border-color: var(--primary-color);
+            border-color: var(--ar-color-primary);
         }
     `;
     const [value, setValue] = createSignal(props.value || '');

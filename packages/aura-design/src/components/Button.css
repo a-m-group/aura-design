@@ -1,8 +1,8 @@
 :host {
     align-items: center;
-    border-radius: var(--border-radius);
+    border-radius: var(--ar-size-3);
     display: inline-flex;
-    height: var(--input-height);
+    height: var(--ar-size-m);
 }
 
 button {
@@ -15,7 +15,7 @@ button {
     cursor: pointer;
     display: inline-flex;
     font: inherit;
-    gap: var(--gap);
+    gap: var(--ar-size-6);
     height: inherit;
     justify-content: center;
     min-width: 4rem;
@@ -29,18 +29,18 @@ button:hover {
 }
 
 .primary {
-    background-image: var(--accent-gradient);
-    color: var(--accent-color);
+    background: var(--ar-color-primary-gradient);
+    color: var(--ar-color-white);
 
     &.text {
-        background-image: none;
-        color: var(--primary-color);
+        background: none;
+        color: var(--ar-color-primary);
     }
 
     &.outline {
-        background-image: none;
-        border: 1px solid var(--primary-color);
-        color: var(--primary-color);
+        background: none;
+        border: 1px solid var(--ar-color-primary);
+        color: var(--ar-color-primary);
     }
 
     &:hover {
@@ -49,17 +49,18 @@ button:hover {
 }
 
 .info {
-    background: var(--info-color);
+    background: var(--ar-color-info);
+    color: var(--ar-color-white);
 
     &.text {
         background: none;
-        color: var(--text-color);
+        color: var(--ar-color-text);
     }
 
     &.outline {
         background: none;
-        border: 1px solid var(--info-color);
-        color: var(--text-color);
+        border: 1px solid var(--ar-color-info);
+        color: var(--ar-color-text);
     }
 
     &:hover {
@@ -68,50 +69,50 @@ button:hover {
 }
 
 .warning {
-    background: var(--warning-color);
-    color: var(--accent-color);
+    background: var(--ar-color-warning);
+    color: var(--ar-color-white);
 
     &.text {
         background: none;
-        color: var(--warning-color);
+        color: var(--ar-color-warning);
     }
 
     &.outline {
         background: none;
-        border: 1px solid var(--warning-color);
-        color: var(--warning-color);
+        border: 1px solid var(--ar-color-warning);
+        color: var(--ar-color-warning);
     }
 }
 
 .danger {
-    background: var(--danger-color);
-    color: var(--accent-color);
+    background: var(--ar-color-danger);
+    color: var(--ar-color-white);
 
     &.text {
         background: none;
-        color: var(--danger-color);
+        color: var(--ar-color-danger);
     }
 
     &.outline {
         background: none;
-        border: 1px solid var(--danger-color);
-        color: var(--danger-color);
+        border: 1px solid var(--ar-color-danger);
+        color: var(--ar-color-danger);
     }
 }
 
 .success {
-    background: var(--success-color);
-    color: var(--accent-color);
+    background: var(--ar-color-success);
+    color: var(--ar-color-white);
 
     &.text {
         background: none;
-        color: var(--success-color);
+        color: var(--ar-color-success);
     }
 
     &.outline {
         background: none;
-        border: 1px solid var(--success-color);
-        color: var(--success-color);
+        border: 1px solid var(--ar-color-success);
+        color: var(--ar-color-success);
     }
 }
 
@@ -123,5 +124,5 @@ button:hover {
 }
 
 .round {
-    border-radius: var(--round-radius);
+    border-radius: var(--ar-size-21);
 }

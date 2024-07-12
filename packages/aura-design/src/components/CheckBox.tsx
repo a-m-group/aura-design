@@ -37,16 +37,17 @@ export const CheckBox = (props: Props, { element }: any) => {
             position: relative;
             top: 0;
             left: 0;
-            height: var(--checkbox-size);
-            width: var(--checkbox-size);
-            background-color: var(--bg-2);
+            height: var(--ar-size-18);
+            width: var(--ar-size-18);
+            background-color: var(--ar-color-info-2);
             transition: all 0.3s;
             border-radius: 5px;
+            box-sizing: border-box;
         }
 
         /* When the checkbox is checked, add a blue background */
         .container input:checked ~ .checkmark {
-            background-color: var(--primary-color);
+            background: var(--ar-color-primary-gradient);
             animation: pop 0.5s;
             animation-direction: alternate;
         }

@@ -17,7 +17,7 @@ export const DanceCount = (props: Props) => {
     const styles = css`
         :host {
             display: inline-flex;
-            --dance-count-bg: var(--primary-color);
+            --dance-count-bg: var(--ar-color-primary);
             --dance-count-height: 82px;
             --dance-count-width: 65px;
         }
@@ -31,7 +31,7 @@ export const DanceCount = (props: Props) => {
             border-radius: 10px;
             margin-right: 5px;
             font-size: ${props.size}px;
-            color: var(--accent-color);
+            color: var(--ar-color-white);
         }
     `;
     const numbers = `${props.count}`.split('').map((char) => (char === ',' ? ',' : parseInt(char)));

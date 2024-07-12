@@ -1,10 +1,10 @@
 :host {
     align-items: center;
-    background-color: var(--bg-2);
-    border-radius: var(--border-radius);
+    background-color: var(--ar-color-info-2);
+    border-radius: var(--ar-size-3);
     box-sizing: border-box;
     display: flex;
-    gap: var(--gap);
+    gap: var(--ar-size-6);
     padding: 0 10px;
 }
 

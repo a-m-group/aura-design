@@ -1,11 +1,11 @@
 :host {
     align-items: center;
-    background-color: var(--bg-2);
-    border-radius: var(--border-radius);
+    background-color: var(--ar-color-info-2);
+    border-radius: var(--ar-size-3);
     box-sizing: border-box;
     display: inline-flex;
-    gap: var(--gap);
-    height: var(--input-height);
+    gap: var(--ar-size-6);
+    height: var(--ar-size-m);
     padding: 0 12px;
     width: 100%;
 }
