@@ -7,7 +7,7 @@
     "build:aura": "pnpm -F aura-design build",
     "build:aura-pro": "pnpm -F aura-design-pro build",
     "docs:dev": "pnpm -F aura-design-docs storybook",
-    "docs:build": "pnpm -F aura-design-docs build-storybook-docs",
+    "docs:build": "pnpm -F aura-design-docs build-storybook",
     "docs:deploy": "pnpm -F aura-design-docs run deploy"
   },
   "keywords": [],
