@@ -53,6 +53,13 @@ export const FloatWrapper = (props: Props, { element }: any) => {
             posX = touch.clientX - left();
             posY = touch.clientY - top();
         }
+        const customEvent = new CustomEvent('dragstart', {
+            detail: {
+                value: true,
+            },
+            bubbles: true,
+        });
+        element.dispatchEvent(customEvent);
         window.addEventListener('mouseup', handleDragEnd);
         window.addEventListener('touchstart', handleDragStart);
         window.addEventListener('touchmove', handleDragMove);
@@ -79,6 +86,13 @@ export const FloatWrapper = (props: Props, { element }: any) => {
 
     const handleDragEnd = () => {
         isDragging = false;
+        const customEvent = new CustomEvent('dragend', {
+            detail: {
+                value: false,
+            },
+            bubbles: true,
+        });
+        element.dispatchEvent(customEvent);
         window.removeEventListener('mouseup', handleDragEnd);
         window.removeEventListener('touchstart', handleDragStart);
         window.removeEventListener('touchmove', handleDragMove);

@@ -1,7 +1,7 @@
 export default {
     title: 'Components/Float/FloatChatFrame',
     tags: ['autodocs'],
-    component: <ar-float-chat-frame />,
+    component: <ar-float-chat-frame></ar-float-chat-frame>,
     argTypes: {
         left: { control: 'text' },
         top: { control: 'text' },
@@ -13,6 +13,8 @@ export default {
 
 export const Default = {
     args: {
+        logo: '',
+        size: '50px',
         left: '',
         top: '',
         right: '40px',

@@ -1,4 +1,4 @@
-import { createSignal } from 'solid-js';
+import { createSignal, Show } from 'solid-js';
 import { customElement } from 'solid-element';
 import { Portal } from 'solid-js/web';
 
@@ -7,6 +7,8 @@ import { TAG_PREFIX } from './config';
 import styles from './FloatChatFrame.module.css';
 
 interface Props {
+    logo: string;
+    size: string;
     left: string;
     top: string;
     right: string;
@@ -16,7 +18,9 @@ interface Props {
 
 export const FloatChatFrame = (props: Props) => {
     const [open, setOpen] = createSignal(false);
-    const handleOpen = () => {
+    const handleOpen = (e: MouseEvent | TouchEvent) => {
+        e.preventDefault();
+        e.stopPropagation();
         setOpen(!open());
     };
     return (
@@ -28,6 +32,7 @@ export const FloatChatFrame = (props: Props) => {
                         position: 'fixed',
                         left: 0,
                         top: 0,
+                        'z-index': 9,
                     }}
                 >
                     <ar-float-wrapper
@@ -45,14 +50,27 @@ export const FloatChatFrame = (props: Props) => {
                                     style="border: none"
                                 ></iframe>
                             </div>
-                            <ar-button
-                                class={styles['chat-logo']}
-                                shape="circle"
-                                style="height: auto"
-                                onClick={handleOpen}
+                            {/* The slot cannot be used in the Portal. */}
+                            <Show
+                                when={props.logo}
+                                fallback={
+                                    <ar-button
+                                        class={styles['chat-logo']}
+                                        shape="circle"
+                                        style="height: auto"
+                                        onClick={handleOpen}
+                                    >
+                                        <ar-icon size="2rem" name="ai-chat"></ar-icon>
+                                    </ar-button>
+                                }
                             >
-                                <ar-icon size="2rem" name="ai-chat"></ar-icon>
-                            </ar-button>
+                                <img
+                                    class={styles['chat-logo']}
+                                    style={{ width: props.size, height: props.size }}
+                                    src={props.logo}
+                                    onClick={handleOpen}
+                                />
+                            </Show>
                         </ar-flex-box>
                     </ar-float-wrapper>
                 </div>
@@ -65,6 +83,8 @@ export default () => {
     customElement(
         `${TAG_PREFIX}-float-chat-frame`,
         {
+            logo: '',
+            size: '',
             left: '',
             top: '',
             right: '',

@@ -29,6 +29,7 @@ export const FloatButton = (props: Props) => {
                         right={props.right}
                         bottom={props.bottom}
                     >
+                        {/* The slot cannot be used in the Portal. */}
                         <ar-button shape="circle" style="height: auto">
                             {props.text}
                         </ar-button>

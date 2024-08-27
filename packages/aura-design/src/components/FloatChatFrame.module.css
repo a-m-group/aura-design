@@ -4,17 +4,19 @@
         drop-shadow(rgb(0 0 0 / 16%) 0 2px 32px);
     height: auto;
     position: fixed;
+    -webkit-user-drag: none;
     user-select: none;
 }
 
 .chat-card {
     border-radius: 16px;
+    bottom: calc(100% + 1rem);
     box-shadow: rgb(0 0 0 / 16%) 0 5px 40px;
     height: min(900px, 100vh - 120px);
-    min-height: 80px;
     opacity: 0;
     overflow: hidden;
     pointer-events: all;
+    position: absolute;
     transform: scale(0);
     transform-origin: right bottom;
     transition: width 200ms ease 0s, height 200ms ease 0s, max-height 200ms ease 0s,
@@ -28,7 +30,11 @@
 }
 
 .chat-logo {
+    border-radius: 50%;
+    cursor: pointer;
     transition: transform 300ms cubic-bezier(0, 1.2, 1, 1) 0s;
+    -webkit-user-drag: none;
+    user-select: none;
 }
 
 .chat-logo:hover {
