@@ -6,6 +6,7 @@ export default {
         title: { control: 'text' },
         description: { control: 'text' },
         'image-url': { control: 'text' },
+        'aspect-ratio': { control: 'text' },
     },
 };
 

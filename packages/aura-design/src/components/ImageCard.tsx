@@ -8,23 +8,30 @@ interface CardProps {
     title: string;
     description: string;
     imageUrl: string;
+    aspectRatio: string;
 }
 
 export const Card = (props: CardProps) => {
     return (
         <>
             <style>{styles}</style>
-            <div class="card">
+            <div class="card" style={{ 'aspect-ratio': props.aspectRatio }}>
                 {props.imageUrl && <img class="card-image" src={props.imageUrl} />}
-                <div class="card-info">
-                    <div class="card-title">{props.title}</div>
-                    <div class="card-description">{props.description}</div>
-                </div>
+                {props.title && (
+                    <div class="card-info">
+                        <div class="card-title">{props.title}</div>
+                        <div class="card-description">{props.description}</div>
+                    </div>
+                )}
             </div>
         </>
     );
 };
 
 export default () => {
-    customElement(`${TAG_PREFIX}-image-card`, { title: '', description: '', imageUrl: '' }, Card);
+    customElement(
+        `${TAG_PREFIX}-image-card`,
+        { title: '', description: '', imageUrl: '', aspectRatio: 'auto' },
+        Card,
+    );
 };
