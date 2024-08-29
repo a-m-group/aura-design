@@ -1,6 +1,6 @@
 {
   "name": "@aura-group/aura-design-pro",
-  "version": "0.1.6",
+  "version": "0.1.7",
   "main": "dist/aura-design-pro.umd.js",
   "module": "dist/aura-design-pro.es.js",
   "typings": "dist/types/components/index.d.ts",
@@ -22,6 +22,7 @@
   "dependencies": {
     "highlight.js": "^11.7.0",
     "markdown-it": "^13.0.1",
+    "markdown-it-container": "^4.0.0",
     "markdown-it-highlightjs": "^4.0.1",
     "rollup": "^3.18.0",
     "solid-element": "^1.6.3",
@@ -36,6 +37,7 @@
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-typescript": "^11.0.0",
     "@types/markdown-it": "^13.0.1",
+    "@types/markdown-it-container": "^2.0.10",
     "eslint": "^8.36.0",
     "eslint-config-aurai": "workspace:*",
     "typescript": "^4.9.3",

@@ -27,6 +27,13 @@ console.log(climbStairsDP(4)); // 输出：5
     },
 };
 
+export const CustomUI = {
+    args: {
+        text: `::: custom-ui <img src='http://localhost:6006/card_bg.png'/>:::`,
+        theme: 'dark',
+    },
+};
+
 export default {
     title: 'Pro Components/RichText',
     tags: ['autodocs'],

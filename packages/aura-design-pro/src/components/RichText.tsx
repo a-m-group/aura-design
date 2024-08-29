@@ -1,7 +1,7 @@
 import { onMount } from 'solid-js';
 import MarkdownIt from 'markdown-it';
 import MarkdownItHighlight from 'markdown-it-highlightjs';
-
+import MarkdownItContainer from 'markdown-it-container';
 import { customElement } from 'solid-element';
 
 import { TAG_PREFIX } from './config';
@@ -16,7 +16,22 @@ const md = MarkdownIt({
     .use(MarkdownItHighlight, {
         inline: true,
     })
-    .use(markdownWrapper);
+    .use(markdownWrapper)
+    .use(MarkdownItContainer, 'custom-ui', {
+        validate: (params: string) => {
+            return params.trim().match(/^custom-ui\s+(.*)$/);
+        },
+        render: (tokens: any, idx: number) => {
+            const m = tokens[idx].info.trim().match(/^custom-ui\s+(.*)$/);
+            if (tokens[idx].nesting === 1) {
+                // opening tag
+                return '<div>' + m[1] + '\n';
+            } else {
+                // closing tag
+                return '</div>\n';
+            }
+        },
+    });
 
 export type Props = {
     theme: string;
@@ -66,7 +81,7 @@ export const RichText = (props: Props, { element }: any) => {
     return (
         <>
             <link
-                href={`https://cdn.bootcdn.net/ajax/libs/highlight.js/11.8.0/styles/atom-one-${props.theme}.min.css`}
+                href={`https://cdn.jsdelivr.net/npm/highlight.js@11.7.0/styles/atom-one-${props.theme}.min.css`}
                 rel="stylesheet"
             ></link>
             <style>{styles}</style>
