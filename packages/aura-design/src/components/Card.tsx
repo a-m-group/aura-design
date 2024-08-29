@@ -8,7 +8,6 @@ import { css } from '../utils';
 type Props = {
     header?: boolean;
     footer?: boolean;
-    icon?: boolean;
     logo?: string;
     title?: string;
     description?: string;
@@ -32,10 +31,10 @@ export const Card = (props: Props) => {
     const defaultContent = () => (
         <>
             <Show
-                when={props.icon}
-                fallback={<img class="w-20 rd-2" src={props.logo} alt="logo" />}
+                when={props.logo && props.logo?.indexOf('https://') > -1}
+                fallback={<ar-icon name={props.logo} size="5rem"></ar-icon>}
             >
-                <ar-icon name={props.logo} size="5rem"></ar-icon>
+                <img class="w-20 rd-2" src={props.logo} alt="logo" />
             </Show>
             <div class="flex flex-col justify-center gap-2 h-20">
                 <div class="font-bold">{props.title}</div>
@@ -84,7 +83,6 @@ export default () => {
         {
             header: false,
             footer: true,
-            icon: false,
             logo: 'ai-chat',
             title: '',
             description: '',

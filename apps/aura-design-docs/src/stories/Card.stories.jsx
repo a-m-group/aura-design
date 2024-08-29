@@ -6,7 +6,6 @@ export default {
         backgrounds: { default: 'light' },
     },
     argTypes: {
-        icon: { control: 'boolean' },
         logo: { control: 'text' },
         title: { control: 'text' },
         description: { control: 'text' },
@@ -18,7 +17,6 @@ export default {
 
 export const Default = {
     args: {
-        icon: true,
         logo: 'ai-chat',
         title: 'Title',
         description: 'Some descriptions',
