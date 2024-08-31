@@ -16,7 +16,6 @@ export const FlexItem = (props: Props) => {
             order: ${props.order};
             flex: ${props.flex};
             align-self: ${props.self};
-            overflow: auto;
         }
     `;
     return (
