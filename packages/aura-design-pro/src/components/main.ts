@@ -1,2 +1,3 @@
 import RichText from './RichText';
-export { RichText };
+import Chart from './Chart';
+export { RichText, Chart };

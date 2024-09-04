@@ -29,7 +29,7 @@ console.log(climbStairsDP(4)); // 输出：5
 
 export const CustomUI = {
     args: {
-        text: `::: custom-ui <img src='http://localhost:6006/card_bg.png'/>:::`,
+        text: `::: custom-ui <img src='http://localhost:6006/card_bg.png'/> \n:::\n`,
         theme: 'dark',
     },
 };
