@@ -1,6 +1,10 @@
+:root {
+  display: block;
+}
 .chart-card {
   border: 1px solid var(--ar-color-border-3);
   border-radius: 6px;
+  background: var(--ar-color-bg-1);
 }
 .chart-title {
   padding: 15px;
