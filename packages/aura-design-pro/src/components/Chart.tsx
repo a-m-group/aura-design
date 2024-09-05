@@ -41,7 +41,7 @@ export const Chart = (props: Props, { element }: any) => {
             ...getBaseOption(),
             xAxis: { type: 'category' },
             yAxis: {},
-            series: [{ type: 'bar' }],
+            series: getSeries('bar'),
         };
     };
     const getLineOption = () => {
@@ -49,8 +49,14 @@ export const Chart = (props: Props, { element }: any) => {
             ...getBaseOption(),
             xAxis: { type: 'category' },
             yAxis: {},
-            series: [{ type: 'line' }],
+            series: getSeries('line'),
         };
+    };
+    const getSeries = (type: string) => {
+        const measures = props.dimensions.slice(1);
+        return measures.map(() => ({
+            type,
+        }));
     };
     const renderChart = (option: any) => {
         if (!chartRef()) return;

@@ -5,6 +5,7 @@
   border: 1px solid var(--ar-color-border-3);
   border-radius: 6px;
   background: var(--ar-color-bg-1);
+  min-width: 50vw;
 }
 .chart-title {
   padding: 15px;
