@@ -1,16 +1,19 @@
 {
   "name": "stylelint-config-aurai",
-  "version": "0.0.1",
+  "version": "0.0.8",
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "stylelint": "^14.12.0",
+    "stylelint-config-html": "^1.1.0",
     "stylelint-config-prettier": "^9.0.3",
+    "stylelint-config-recommended-vue": "^1.5.0",
     "stylelint-config-standard": "^28.0.0",
     "stylelint-order": "^5.0.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^14.12.0"
   },
   "publishConfig": {
     "access": "public"
   }
 }
-

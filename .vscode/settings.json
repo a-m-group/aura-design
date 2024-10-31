@@ -4,7 +4,7 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit",
       "source.fixAll.stylelint": "explicit",
-      "source.fixAll": "explicit"
+      "source.fixAll.prettier": "explicit"
     },
     "stylelint.validate": ["css", "scss", "html", "vue", "astro"],
     "eslint.validate": [
