@@ -19,6 +19,7 @@ import Popover from './Popover';
 import Portal from './Portal';
 import RadioButton from './RadioButton';
 import RadioGroup from './RadioGroup';
+import Segmented from './Segmented';
 import Select from './Select';
 import Textarea from './Textarea';
 import Textfield from './Textfield';
@@ -45,6 +46,7 @@ export {
     Portal,
     RadioButton,
     RadioGroup,
+    Segmented,
     Select,
     Textarea,
     Textfield,

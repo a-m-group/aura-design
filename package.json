@@ -8,7 +8,9 @@
     "build:aura-pro": "pnpm -F aura-design-pro build",
     "docs:dev": "pnpm -F aura-design-docs storybook",
     "docs:build": "pnpm -F aura-design-docs build-storybook",
-    "docs:deploy": "pnpm -F aura-design-docs run deploy"
+    "demo:vue2": "pnpm -F vue2-app run serve",
+    "demo:vue3": "pnpm -F vue3-app run serve",
+    "demo:react": "pnpm -F react-app run dev"
   },
   "keywords": [],
   "author": "",

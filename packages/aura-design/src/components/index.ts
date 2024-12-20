@@ -10,3 +10,17 @@ export const defineCustomElements = (elements: Record<string, any> = CustomEleme
     }
 };
 export { registerIcon } from './Icon';
+
+export const originalArrayToString = Array.prototype.toString;
+// array prop to string
+export const dangerouslyArrayToString = ()=> {
+    Array.prototype.toString = function() {
+        try {
+            return JSON.stringify(this);
+        } catch (error) {
+            console.error("Error converting array to JSON string:", error);
+            return '[]';
+        }
+    };
+}
+
