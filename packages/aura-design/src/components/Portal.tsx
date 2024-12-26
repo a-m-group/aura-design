@@ -26,7 +26,7 @@ export const Portal = ({ content, src }: Props, { element }: any) => {
     onMount(() => {
         const iframe = element.shadowRoot.getElementById('iframe');
         iframe.onload = ()=> {
-            console.log('iframe load loaded')
+            // console.log('iframe load loaded')
             element.dispatchEvent(new CustomEvent('load', { bubbles: true }));
         };
         if (content) {
