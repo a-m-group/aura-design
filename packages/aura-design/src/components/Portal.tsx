@@ -25,6 +25,9 @@ export const Portal = ({ content, src }: Props, { element }: any) => {
     `;
     onMount(() => {
         const iframe = element.shadowRoot.getElementById('iframe');
+        iframe.onload = ()=> {
+            element.dispatchEvent(new CustomEvent('load', { bubbles: true }));
+        };
         if (content) {
             iframe.contentDocument.write(content);
             element.removeAttribute('content');

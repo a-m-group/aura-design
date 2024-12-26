@@ -4,10 +4,17 @@ export default {
     component: <ar-portal style="height: 500px" />,
     argTypes: {
         content: { control: 'text' },
+        src: { control: 'text' },
     },
 };
 
 export const Default = {
+    args: {
+        src: 'https://www.baidu.com'
+    },
+};
+
+export const ContentMode = {
     args: {
         content: `<!DOCTYPE html>
         <html lang="en">
@@ -87,7 +94,7 @@ export const Default = {
         
             function updateGame() {
                 if (checkCollision()) {
-                    alert('Game Over!');
+                    // alert('Game Over!');
                     return;
                 }
         
