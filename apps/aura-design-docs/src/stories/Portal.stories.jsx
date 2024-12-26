@@ -14,7 +14,7 @@ export const Default = {
     },
 };
 
-export const ContentMode = {
+export const Content = {
     args: {
         content: `<!DOCTYPE html>
         <html lang="en">
