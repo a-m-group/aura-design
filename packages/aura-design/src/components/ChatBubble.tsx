@@ -14,6 +14,7 @@ type Props = {
     avatar?: string;
     avatarType?: string;
     direction?: 'row' | 'column';
+    think?: string;
 };
 
 export const ChatBubble = (props: Props, { element }: any) => {
@@ -57,6 +58,17 @@ export const ChatBubble = (props: Props, { element }: any) => {
         .chat-content {
             min-width: 30px;
         }
+        .think {
+            font-size: 12px;
+            color: var(--ar-color-text-2);
+        }
+        .think-title {
+            padding: 1em 0;
+        }
+        .think-content {
+            border-left: 2px solid #ccc;
+            padding-left: 6px;
+        }
     `;
     const handleBrowser = (e: CustomEvent) => {
         const customEvent = new CustomEvent('browser', {
@@ -97,10 +109,18 @@ export const ChatBubble = (props: Props, { element }: any) => {
                     <Show
                         when={props.loading}
                         fallback={
-                            <ar-rich-text
-                                onBrowser={handleBrowser}
-                                text={props.content}
-                            ></ar-rich-text>
+                            <>
+                                <Show when={props.think}>
+                                    <div class="think">
+                                        <div class="think-title">深度思考...</div>
+                                        <div class="think-content">{props.think}</div>
+                                    </div>
+                                </Show>
+                                <ar-rich-text
+                                    onBrowser={handleBrowser}
+                                    text={props.content}
+                                ></ar-rich-text>
+                            </>
                         }
                     >
                         <div class="flex items-center gap-3">
@@ -126,6 +146,7 @@ export default () => {
             avatar: '',
             avatarType: 'icon',
             direction: 'row',
+            think: '',
         },
         ChatBubble,
     );

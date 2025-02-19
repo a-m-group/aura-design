@@ -4,6 +4,7 @@ export default {
     component: <ar-chat-bubble></ar-chat-bubble>,
     argTypes: {
         role: { control: 'text' },
+        think: { control: 'text' },
         content: { control: 'text' },
         loading: { control: 'boolean' },
         'loading-text': { control: 'text' },

@@ -1,7 +1,11 @@
 export default {
     title: 'Components/Data Display/ImageCard',
     tags: ['autodocs'],
-    component: <ar-image-card class="card"></ar-image-card>,
+    component: (
+        <ar-image-card class="card">
+            <ar-button slot="extra">123</ar-button>
+        </ar-image-card>
+    ),
     argTypes: {
         title: { control: 'text' },
         description: { control: 'text' },

@@ -19,7 +19,12 @@ export const Card = (props: CardProps) => {
                 {props.imageUrl && <img class="card-image" src={props.imageUrl} />}
                 {props.title && (
                     <div class="card-info">
-                        <div class="card-title">{props.title}</div>
+                        <div class="card-title">
+                            <div>{props.title}</div>
+                            <div>
+                                <slot name="extra"></slot>
+                            </div>
+                        </div>
                         <div class="card-description">{props.description}</div>
                     </div>
                 )}

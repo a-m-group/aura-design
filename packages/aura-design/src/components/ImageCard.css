@@ -49,6 +49,7 @@
     align-items: center;
     display: flex;
     height: 50px;
+    justify-content: space-between;
     padding: 0 15px;
 }
 
