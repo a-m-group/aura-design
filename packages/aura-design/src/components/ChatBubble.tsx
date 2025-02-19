@@ -68,6 +68,7 @@ export const ChatBubble = (props: Props, { element }: any) => {
         .think-content {
             border-left: 2px solid #ccc;
             padding-left: 6px;
+            margin-bottom: 1em;
         }
     `;
     const handleBrowser = (e: CustomEvent) => {
