@@ -1,9 +1,12 @@
 
 ---
 
-# Aura Design Web Components
+# Aura Design AI Web Components
 
 Our AI Component Library is designed to provide a seamless integration of AI capabilities into your web applications. Built with SolidJS and Web Components, our library offers a simple and clean solution for incorporating advanced AI features into your projects.
+
+## Use Case
+[AM](https://a-m.love/).
 
 ## Key Features
 1. Effortless Integration: Easily add AI components to your web applications without complex setup or configuration.
