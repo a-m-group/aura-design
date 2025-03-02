@@ -1,3 +1,3 @@
-import RichText from './RichText';
+import MarkdownRender from './MarkdownRender';
 import Chart from './Chart';
-export { RichText, Chart };
+export { MarkdownRender, Chart };

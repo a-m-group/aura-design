@@ -7,7 +7,7 @@ import { customElement } from 'solid-element';
 import { TAG_PREFIX } from './config';
 import markdownWrapper from '../utils/markdownWrapper';
 import { copyToClipboard } from '../utils/copyToClipboard';
-import styles from './RichText.css?inline';
+import styles from './MarkdownRender.css?inline';
 
 const md = MarkdownIt({
     linkify: true,
@@ -38,7 +38,7 @@ export type Props = {
     text: string;
 };
 
-export const RichText = (props: Props, { element }: any) => {
+export const MarkdownRender = (props: Props, { element }: any) => {
     const timeoutIdMap: Map<HTMLElement, NodeJS.Timeout> = new Map();
     onMount(() => {
         element.shadowRoot.addEventListener('click', (e: Event) => {
@@ -91,5 +91,5 @@ export const RichText = (props: Props, { element }: any) => {
 };
 
 export default () => {
-    customElement(`${TAG_PREFIX}-rich-text`, { theme: 'light', text: '' }, RichText);
+    customElement(`${TAG_PREFIX}-markdown-render`, { theme: 'light', text: '' }, MarkdownRender);
 };

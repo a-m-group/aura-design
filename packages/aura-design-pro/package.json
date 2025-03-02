@@ -1,6 +1,6 @@
 {
   "name": "@aura-group/aura-design-pro",
-  "version": "0.1.11",
+  "version": "0.2.1",
   "main": "dist/aura-design-pro.umd.js",
   "module": "dist/aura-design-pro.es.js",
   "typings": "dist/types/components/index.d.ts",
