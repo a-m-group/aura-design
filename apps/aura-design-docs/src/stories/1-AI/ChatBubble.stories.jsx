@@ -1,5 +1,5 @@
 export default {
-    title: 'Components/Data Display/ChatBubble',
+    title: 'AI/ChatBubble',
     tags: ['autodocs'],
     component: <ar-chat-bubble></ar-chat-bubble>,
     argTypes: {
@@ -19,6 +19,18 @@ export default {
 export const Assistant = {
     args: {
         role: 'assistant',
+        content: 'Hello! How can I assist you today?',
+        loading: false,
+        'show-avatar': true,
+        'avatar-type': 'icon',
+        direction: 'row',
+    },
+};
+
+export const Think = {
+    args: {
+        role: 'assistant',
+        think: 'Okay, the user said "hello". I should respond in a friendly and welcoming manner.',
         content: 'Hello! How can I assist you today?',
         loading: false,
         'show-avatar': true,

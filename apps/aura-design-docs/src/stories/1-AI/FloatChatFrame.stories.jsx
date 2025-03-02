@@ -1,5 +1,5 @@
 export default {
-    title: 'Components/Float/FloatChatFrame',
+    title: 'AI/FloatChatFrame',
     tags: ['autodocs'],
     component: <ar-float-chat-frame></ar-float-chat-frame>,
     argTypes: {

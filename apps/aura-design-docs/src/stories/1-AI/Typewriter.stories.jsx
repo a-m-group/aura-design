@@ -1,5 +1,5 @@
 export default {
-    title: 'Components/Data Display/Typewriter',
+    title: 'AI/Typewriter',
     tags: ['autodocs'],
     component: <ar-typewriter />,
     argTypes: {

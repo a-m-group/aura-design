@@ -29,15 +29,15 @@ console.log(climbStairsDP(4)); // 输出：5
 
 export const CustomUI = {
     args: {
-        text: `::: custom-ui <img src='http://localhost:6006/card_bg.png'/> \n:::\n`,
+        text: `::: custom-ui <ar-image-card style="width: 224px; height: 336px;" title="英语老师" description="和英语老师对话，老师会纠正您的语法错误、拼写错误和事实错误。" image-url="/card_bg.png"></ar-image-card> \n:::\n`,
         theme: 'dark',
     },
 };
 
 export default {
-    title: 'Pro Components/RichText',
+    title: 'AI/MarkdownRender',
     tags: ['autodocs'],
-    component: <ar-rich-text />,
+    component: <ar-markdown-render />,
     argTypes: {
         theme: { control: 'select', options: ['light', 'dark'] },
         text: { control: 'text' },

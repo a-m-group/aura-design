@@ -63,7 +63,7 @@ export const ChatBubble = (props: Props, { element }: any) => {
             color: var(--ar-color-text-2);
         }
         .think-title {
-            padding: 1em 0;
+            padding-top: 1em;
         }
         .think-content {
             border-left: 2px solid #ccc;
@@ -114,13 +114,17 @@ export const ChatBubble = (props: Props, { element }: any) => {
                                 <Show when={props.think}>
                                     <div class="think">
                                         <div class="think-title">深度思考...</div>
-                                        <div class="think-content">{props.think}</div>
+                                        <div class="think-content">
+                                            <ar-markdown-render
+                                                text={props.think}
+                                            ></ar-markdown-render>
+                                        </div>
                                     </div>
                                 </Show>
-                                <ar-rich-text
+                                <ar-markdown-render
                                     onBrowser={handleBrowser}
                                     text={props.content}
-                                ></ar-rich-text>
+                                ></ar-markdown-render>
                             </>
                         }
                     >

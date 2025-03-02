@@ -3,7 +3,7 @@ export default {
     tags: ['autodocs'],
     component: (
         <ar-image-card class="card">
-            <ar-button slot="extra">123</ar-button>
+            <ar-button slot="extra">对话</ar-button>
         </ar-image-card>
     ),
     argTypes: {

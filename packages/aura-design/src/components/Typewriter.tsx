@@ -20,7 +20,7 @@ export const Typewriter = (props: TypewriterProps) => {
         const interval = setInterval(() => {
             setDisplayText(text.substr(0, index()));
             setIndex(index() + 1);
-            if (index() >= text.length) {
+            if (index() > text.length) {
                 setIsTyping(false);
                 clearInterval(interval);
             }
