@@ -22,9 +22,9 @@ defineCustomElements();
 // })
 defineCustomElementsPro();
 
-import { render } from 'solid-js/web';
+// import { render } from 'solid-js/web';
 
-let disposeStory;
+// let disposeStory;
 
 // solidjs render
 // export const decorators = [
