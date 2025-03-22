@@ -1,22 +1,24 @@
 
 ---
 
-# Aura Design Web Components
+# Aura Design AI Web Components
 
-Our AI Component Library is designed to provide a seamless integration of AI capabilities into your web applications. Built with SolidJS and Web Components, our library offers a simple and clean solution for incorporating advanced AI features into your projects.
+An open-source AI-friendly component library for next-generation intelligent applications. 
+
+## Use Case
+[AM](https://a-m.love/).
 
 ## Key Features
-1. Effortless Integration: Easily add AI components to your web applications without complex setup or configuration.
+1. AI-First Design:  AI-optimized interactive components (e.g., data visualization charts, NLP input fields, real-time feedback panels) designed for seamless integration with AI model I/O..
 
-2. High Performance: Utilizing SolidJS for efficient rendering and Web Components for encapsulation, our library ensures high performance.
+2. Universal Web Components: Works with React/Vue/Angular/Svelte and any web framework.
 
 3. Customizable: Tailor the AI components to suit your specific requirements with easy customization options.
 
 4. Modern Design: The components are designed with a modern and sleek interface, enhancing the overall user experience.
 
-5. Scalable: Whether you're building a small project or a large-scale application, our AI Component Library scales effortlessly.
+5. Smart Markdown Renderer: Extended markdown syntax with custom components support.
 
-6. UI Agnostic: Supports React, Preact, Svelte, Vue, Solid, Lit, HTMX, and more.
 
 ## Installation
 

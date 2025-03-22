@@ -1,6 +1,7 @@
 {
   "name": "@aura-group/aura-design-pro",
   "version": "0.3.1",
+  "description": "An open-source AI-friendly component library for next-generation intelligent applications.",
   "main": "dist/aura-design-pro.umd.js",
   "module": "dist/aura-design-pro.es.js",
   "typings": "dist/types/components/index.d.ts",
