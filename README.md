@@ -36,7 +36,7 @@ To use the components from the Aura Design Library in your project, you can impo
 // Aura Design Web Components
 import {
     defineCustomElements,
-    registerIcon,
+    setupFontSymbol,
     Icon,
     Button,
     Card,
@@ -46,8 +46,8 @@ import {
     Textarea,
     Textfield,
 } from '@aura-group/aura-design';
-// Register svg icon
-registerIcon('/iconfont.svg');
+// Setup icon symbol
+setupFontSymbol()
 // Define the component which you need
 // Use defineCustomElements() will define all the components
 defineCustomElements({
