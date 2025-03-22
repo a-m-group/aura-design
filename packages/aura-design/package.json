@@ -1,6 +1,6 @@
 {
   "name": "@aura-group/aura-design",
-  "version": "0.5.1",
+  "version": "0.6.1",
   "description": "",
   "main": "dist/aura-design.umd.js",
   "module": "dist/aura-design.es.js",
@@ -21,6 +21,7 @@
   "author": "@aura-group",
   "license": "MIT",
   "dependencies": {
+    "component-register": "^0.8.7",
     "solid-element": "^1.6.3",
     "solid-js": "^1.6.11"
   },

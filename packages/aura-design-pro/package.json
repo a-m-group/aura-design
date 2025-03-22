@@ -1,6 +1,6 @@
 {
   "name": "@aura-group/aura-design-pro",
-  "version": "0.2.1",
+  "version": "0.3.1",
   "main": "dist/aura-design-pro.umd.js",
   "module": "dist/aura-design-pro.es.js",
   "typings": "dist/types/components/index.d.ts",
@@ -20,6 +20,7 @@
   "author": "@aura-group",
   "license": "MIT",
   "dependencies": {
+    "@aura-group/aura-design": "workspace:*",
     "echarts": "^5.5.1",
     "highlight.js": "^11.7.0",
     "markdown-it": "^13.0.1",

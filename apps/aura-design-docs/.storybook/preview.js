@@ -12,14 +12,16 @@ import theme from './theme';
 import prettier from 'prettier/standalone';
 import prettierHTML from 'prettier/parser-html';
 
-import { defineCustomElements, registerIcon, Icon } from '@aura-group/aura-design/src/components';
-import { defineCustomElements as defineCustomElementsPro } from '@aura-group/aura-design-pro/src/components';
+// import { defineCustomElements, setupFontSymbol } from '@aura-group/aura-design/src/components';
+import { defineCustomElements as defineCustomElementsPro, setupFontSymbol } from '@aura-group/aura-design-pro/src/components';
 
-registerIcon('/iconfont.svg');
-defineCustomElements();
+setupFontSymbol();
+
+// defineCustomElements();
 // defineCustomElements({
 //   Icon
 // })
+
 defineCustomElementsPro();
 
 // import { render } from 'solid-js/web';
