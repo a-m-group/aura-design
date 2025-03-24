@@ -1,4 +1,4 @@
-import { createEffect, onCleanup, onMount, createMemo } from 'solid-js';
+import { createSignal, createEffect, onCleanup, onMount, createMemo, Show } from 'solid-js';
 import { customElement } from 'solid-element';
 import { ComponentOptions } from 'component-register';
 import { TAG_PREFIX } from './config';
@@ -11,15 +11,15 @@ export type Props = {
 };
 
 export const Icon = (props: Props, { element }: ComponentOptions) => {
-    let symbolAppended = false;
-
+    // let symbolAppended = false;
+    const [symbolAppended, setSymbolAppended] = createSignal(false);
     const appendSymbol = () => {
-        if (symbolAppended) return;
-
+        if (symbolAppended()) return;
         const symbol = document.body.querySelector(`symbol#icon-${props.name}`)?.cloneNode(true);
         if (symbol) {
             element.shadowRoot?.appendChild(symbol);
-            symbolAppended = true;
+            setSymbolAppended(true);
+            // console.log('appended');
         } else {
             console.log('icon symbol not found');
         }
@@ -39,6 +39,7 @@ export const Icon = (props: Props, { element }: ComponentOptions) => {
                             return childNode.id === `icon-${props.name}`;
                         });
                         if (flag) {
+                            // console.log('mutation');
                             appendSymbol();
                             observer.disconnect();
                         }
@@ -67,7 +68,9 @@ export const Icon = (props: Props, { element }: ComponentOptions) => {
                 fill={props.color}
                 aria-hidden="true"
             >
-                <use href={`#icon-${props.name}`}></use>
+                <Show when={symbolAppended()}>
+                    <use href={`#icon-${props.name}`}></use>
+                </Show>
             </svg>
         </>
     );
