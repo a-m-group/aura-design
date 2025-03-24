@@ -12,12 +12,10 @@ import theme from './theme';
 import prettier from 'prettier/standalone';
 import prettierHTML from 'prettier/parser-html';
 
-// import { defineCustomElements, setupFontSymbol } from '@aura-group/aura-design/src/components';
-import { defineCustomElements as defineCustomElementsPro, setupFontSymbol } from '@aura-group/aura-design-pro/src/components';
+import { defineCustomElements, setupFontSymbol } from '@aura-group/aura-design/src/components';
+import { defineCustomElements as defineCustomElementsPro } from '@aura-group/aura-design-pro/src/components';
 
-setupFontSymbol();
-
-// defineCustomElements();
+defineCustomElements();
 // defineCustomElements({
 //   Icon
 // })

@@ -2,11 +2,12 @@ import * as CustomElements from './main';
 import '../theme/main.css';
 import '../theme/light.css';
 import '../theme/dark.css';
+import { setupFontSymbol } from '../utils';
 
 export * from './main';
 export { setupFontSymbol } from '../utils';
 export const defineCustomElements = (elements: Record<string, () => void> = CustomElements) => {
-    // setupFontSymbol();
+    setupFontSymbol();
     for (const key in elements) {
         const element = elements[key];
         element();
